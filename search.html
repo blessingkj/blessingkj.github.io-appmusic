@@ -1,4 +1,15 @@
-<!DOCTYPE html><html lang="en" data-dpr="1" data-theme="theme" style="font-size: 106.667px;"><head><meta charset="utf-8"><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>知渔音乐</title><meta name="keywords" content="网易云音乐，音乐，播放器，网易，下载，播放，DJ，免费，明星，精选，歌单，识别音乐，收藏，分享音乐，音乐互动，高音质，320K，音乐社交，官网，移动站，music.163.com"><meta name="description" content="网易云音乐是一款专注于发现与分享的音乐产品，依托专业音乐人、DJ、好友推荐及社交功能，为用户打造全新的音乐生活。"><link rel="apple-touch-icon" href="./apple-touch-icon.png"><link rel="apple-touch-icon" sizes="114x114" href="./apple-touch-icon114.png"><link rel="apple-touch-icon" sizes="152x152" href="./apple-touch-icon152.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon180.png"><link rel="icon" href="./favicon.ico"><script>/*
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" data-theme="theme" style="font-size: 106.667px;">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./apple-touch-icon114.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./apple-touch-icon152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon180.png">
+    <link rel="icon" href="./favicon.ico">
+    <script>/*
         注意点:
         预渲染的本质就是在打包时就"模拟浏览器"提前访问路由对应的网页, 然后将访问的结果写入到.html文件中
         但是由于在打包时访问并不是通过"真实的浏览器"来访问, 所以拿不到正是的像素比
@@ -6,9 +17,145 @@
         也正是因为预渲染的时候已经写入过meta标签了, 而运行的时候又会执行一次JS代码再写入一次
         就导致了网页中有两个meta标签
         * */
-        let scale = 1.0 / window.devicePixelRatio;
-        let text = `<meta name="viewport" content="width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no">`;
-        document.write(text);
-        document.documentElement.style.fontSize = window.innerWidth / 7.5 + "px";
-        document.documentElement.setAttribute('data-dpr', window.devicePixelRatio + '');
-        document.documentElement.setAttribute('data-theme', 'theme');</script><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"><link href="/css/chunk-1601a74a.1b95cbe5.css" rel="prefetch"><link href="/css/chunk-1b3fade4.417951b4.css" rel="prefetch"><link href="/css/chunk-32f8f2be.ecf4eea4.css" rel="prefetch"><link href="/css/chunk-49e3436f.734e0e85.css" rel="prefetch"><link href="/css/chunk-6e1e900c.78f12bcc.css" rel="prefetch"><link href="/css/chunk-aa0476a4.50913793.css" rel="prefetch"><link href="/js/chunk-1601a74a.629b01c3.js" rel="prefetch"><link href="/js/chunk-1b3fade4.8dfe7310.js" rel="prefetch"><link href="/js/chunk-32f8f2be.2f0b91c6.js" rel="prefetch"><link href="/js/chunk-49e3436f.82225383.js" rel="prefetch"><link href="/js/chunk-6e1e900c.ce8195cb.js" rel="prefetch"><link href="/js/chunk-aa0476a4.ea26b273.js" rel="prefetch"><link href="/css/app.a95396a6.css" rel="preload" as="style"><link href="/css/chunk-vendors.0e671b37.css" rel="preload" as="style"><link href="/js/app.817ed14d.js" rel="preload" as="script"><link href="/js/chunk-vendors.a99e33e9.js" rel="preload" as="script"><link href="/css/chunk-vendors.0e671b37.css" rel="stylesheet"><link href="/css/app.a95396a6.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/css/chunk-32f8f2be.ecf4eea4.css"><script charset="utf-8" src="/js/chunk-32f8f2be.2f0b91c6.js"></script></head><body><div data-v-77f65732="" id="app"><div data-v-528329b2="" data-v-07d6623d="" data-v-77f65732="" class="header header"><div data-v-528329b2="" class="left"><div data-v-07d6623d="" data-v-528329b2="" class="header-left"></div></div><div data-v-07d6623d="" data-v-528329b2="" class="header-title">知播鱼音乐</div><div data-v-528329b2="" class="right"><div data-v-07d6623d="" data-v-528329b2="" class="header-right"></div></div></div><div data-v-58014074="" data-v-77f65732="" class="tabBar"><div data-v-58014074="" class="item"><span data-v-58014074="">推荐</span></div><div data-v-58014074="" class="item"><span data-v-58014074="">歌手</span></div><div data-v-58014074="" class="item"><span data-v-58014074="">排行</span></div><div data-v-58014074="" class="item router-link-exact-active router-link-active"><span data-v-58014074="">搜索</span></div></div><div data-v-773de102="" data-v-77f65732="" class="search"><div data-v-773de102="" class="search-box"><img data-v-773de102="" src="/img/7.1915fc8e.jpg" alt=""><input data-v-773de102="" type="text" placeholder="搜索歌曲,歌手,专辑"></div><div data-v-773de102="" class="search-suggest" style="display: none;"><div data-v-52173942="" data-v-773de102="" id="wrapper"><ul data-v-773de102="" data-v-52173942="" style="transform: translate(0px, 0px) translateZ(0px);"></ul></div></div><div data-v-773de102="" class="search-hot"><h3 data-v-773de102="">热门搜索</h3><ul data-v-773de102=""></ul></div><ul data-v-773de102="" class="search-history"></ul></div><div data-v-1fb81bb6="" data-v-77f65732="" class="player"><div data-v-41eb650d="" data-v-1fb81bb6="" class="normal-player" style="display: none;"><div data-v-41eb650d="" class="player-wrapper"><div data-v-f8af8b8c="" data-v-41eb650d="" class="playerHeader"><div data-v-f8af8b8c="" class="playerHeader-left"></div><div data-v-f8af8b8c="" class="playerHeader-title"><h3 data-v-f8af8b8c=""></h3><p data-v-f8af8b8c=""></p></div><div data-v-f8af8b8c="" class="playerHeader-right"></div></div><div data-v-90f5631c="" data-v-41eb650d="" class="swiper-container banner swiper-container-initialized swiper-container-horizontal"> <div class="swiper-wrapper" style="transition-duration: 0ms;"><div data-v-90f5631c="" class="cd swiper-slide"><div data-v-90f5631c="" class="cd-wrapper"><img data-v-90f5631c="" alt=""></div><p data-v-90f5631c=""></p></div><div data-v-90f5631c="" class="lyric swiper-slide"><div data-v-52173942="" data-v-90f5631c="" id="wrapper"><ul data-v-90f5631c="" data-v-52173942="" style="transform: translate(0px, 0px) translateZ(0px);"></ul></div></div></div> <div data-v-90f5631c="" class="swiper-pagination swiper-pagination-bullets"></div>   <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div><div data-v-1b8659f2="" data-v-41eb650d="" class="player-bottom"><div data-v-1b8659f2="" class="bottom-progress"><span data-v-1b8659f2="">00:00</span><div data-v-1b8659f2="" class="progress-bar"><div data-v-1b8659f2="" class="progress-line"><div data-v-1b8659f2="" class="progress-dot"></div></div></div><span data-v-1b8659f2="">00:00</span></div><div data-v-1b8659f2="" class="bottom-control"><div data-v-1b8659f2="" class="mode loop"></div><div data-v-1b8659f2="" class="prev"></div><div data-v-1b8659f2="" class="play"></div><div data-v-1b8659f2="" class="next"></div><div data-v-1b8659f2="" class="favorite"></div></div></div></div><div data-v-41eb650d="" class="player-bg"><img data-v-41eb650d="" alt=""></div></div><div data-v-c17d776e="" data-v-1fb81bb6="" class="mini-player"><div data-v-c17d776e="" class="player-wrapper"><div data-v-c17d776e="" class="player-left"><img data-v-c17d776e="" alt=""><div data-v-c17d776e="" class="player-title"><h3 data-v-c17d776e=""></h3><p data-v-c17d776e=""></p></div></div><div data-v-c17d776e="" class="player-right"><div data-v-c17d776e="" class="play"></div><div data-v-c17d776e="" class="list"></div></div></div></div><div data-v-c54deb1a="" data-v-1fb81bb6="" class="list-player" style="display: none;"><div data-v-c54deb1a="" class="player-wrapper"><div data-v-c54deb1a="" class="player-top"><div data-v-c54deb1a="" class="top-left"><div data-v-c54deb1a="" class="mode loop"></div><p data-v-c54deb1a="">顺序播放</p></div><div data-v-c54deb1a="" class="top-right"><div data-v-c54deb1a="" class="del"></div></div></div><div data-v-c54deb1a="" class="player-middle"><div data-v-52173942="" data-v-c54deb1a="" id="wrapper"><ul data-v-c54deb1a="" data-v-52173942="" style="transform: translate(0px, 0px) translateZ(0px);"></ul></div></div><div data-v-c54deb1a="" class="player-bottom"><p data-v-c54deb1a="">关闭</p></div></div></div><audio data-v-1fb81bb6=""></audio></div></div><script src="/js/chunk-vendors.a99e33e9.js"></script><script src="/js/app.817ed14d.js"></script><div data-v-55f27277="" class="container" style=""><div data-v-55f27277="" class="loading"></div><p data-v-55f27277="" class="title">加载中</p></div></body></html>
+    let scale = 1.0 / window.devicePixelRatio
+    let text = `<meta name="viewport" content="width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no">`
+    document.write(text)
+    document.documentElement.style.fontSize = window.innerWidth / 7.5 + 'px'
+    document.documentElement.setAttribute('data-dpr', window.devicePixelRatio + '')
+    document.documentElement.setAttribute('data-theme', 'theme')</script>
+    <link href="css/chunk-2c53fbde.aafacda3.css" rel="prefetch">
+    <link href="css/chunk-37be0faa.476c8e25.css" rel="prefetch">
+    <link href="css/chunk-3af651ee.41a5ad90.css" rel="prefetch">
+    <link href="css/chunk-52307b74.3e88669f.css" rel="prefetch">
+    <link href="css/chunk-7835ee76.ded57f44.css" rel="prefetch">
+    <link href="css/chunk-7ac05ac6.e74e0a6c.css" rel="prefetch">
+    <link href="js/chunk-2c53fbde.8c3d2060.js" rel="prefetch">
+    <link href="js/chunk-37be0faa.5507675a.js" rel="prefetch">
+    <link href="js/chunk-3af651ee.9608930f.js" rel="prefetch">
+    <link href="js/chunk-52307b74.0e168546.js" rel="prefetch">
+    <link href="js/chunk-7835ee76.c6ecd509.js" rel="prefetch">
+    <link href="js/chunk-7ac05ac6.7f61eed5.js" rel="prefetch">
+    <link href="css/app.a95396a6.css" rel="preload" as="style">
+    <link href="css/chunk-vendors.0e671b37.css" rel="preload" as="style">
+    <link href="js/app.378944eb.js" rel="preload" as="script">
+    <link href="js/chunk-vendors.722e1bb3.js" rel="preload" as="script">
+    <link href="css/chunk-vendors.0e671b37.css" rel="stylesheet">
+    <link href="css/app.a95396a6.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/chunk-37be0faa.476c8e25.css">
+    <script charset="utf-8" src="js/chunk-37be0faa.5507675a.js"></script>
+    <title>我是search</title>
+    <meta data-vue-meta-info="true" name="keyWords" content="My Example App">
+    <meta data-vue-meta-info="true" name="description" content="这是一段网页描述1">
+</head>
+<body>
+<div data-v-77f65732="" id="app">
+    <div data-v-528329b2="" data-v-07d6623d="" data-v-77f65732="" class="header header">
+        <div data-v-528329b2="" class="left">
+            <div data-v-07d6623d="" data-v-528329b2="" class="header-left"></div>
+        </div>
+        <div data-v-07d6623d="" data-v-528329b2="" class="header-title">知播鱼音乐</div>
+        <div data-v-528329b2="" class="right">
+            <div data-v-07d6623d="" data-v-528329b2="" class="header-right"></div>
+        </div>
+    </div>
+    <div data-v-58014074="" data-v-77f65732="" class="tabBar">
+        <div data-v-58014074="" class="item"><span data-v-58014074="">推荐</span></div>
+        <div data-v-58014074="" class="item"><span data-v-58014074="">歌手</span></div>
+        <div data-v-58014074="" class="item"><span data-v-58014074="">排行</span></div>
+        <div data-v-58014074="" class="item router-link-exact-active router-link-active"><span
+                data-v-58014074="">搜索</span></div>
+    </div>
+    <div data-v-0b44a04a="" data-v-77f65732="" class="search">
+        <div data-v-0b44a04a="" class="search-box"><img data-v-0b44a04a="" src="img/7.1915fc8e.jpg" alt=""><input
+                data-v-0b44a04a="" type="text" placeholder="搜索歌曲,歌手,专辑"></div>
+        <div data-v-0b44a04a="" class="search-suggest" style="display: none;">
+            <div data-v-52173942="" data-v-0b44a04a="" id="wrapper">
+                <ul data-v-0b44a04a="" data-v-52173942="" style="transform: translate(0px, 0px) translateZ(0px);"></ul>
+            </div>
+        </div>
+        <div data-v-0b44a04a="" class="search-hot"><h3 data-v-0b44a04a="">热门搜索</h3>
+            <ul data-v-0b44a04a=""></ul>
+        </div>
+        <ul data-v-0b44a04a="" class="search-history"></ul>
+    </div>
+    <div data-v-1fb81bb6="" data-v-77f65732="" class="player">
+        <div data-v-41eb650d="" data-v-1fb81bb6="" class="normal-player" style="display: none;">
+            <div data-v-41eb650d="" class="player-wrapper">
+                <div data-v-f8af8b8c="" data-v-41eb650d="" class="playerHeader">
+                    <div data-v-f8af8b8c="" class="playerHeader-left"></div>
+                    <div data-v-f8af8b8c="" class="playerHeader-title"><h3 data-v-f8af8b8c=""></h3>
+                        <p data-v-f8af8b8c=""></p></div>
+                    <div data-v-f8af8b8c="" class="playerHeader-right"></div>
+                </div>
+                <div data-v-90f5631c="" data-v-41eb650d=""
+                     class="swiper-container banner swiper-container-initialized swiper-container-horizontal">
+                    <div class="swiper-wrapper" style="transition-duration: 0ms;">
+                        <div data-v-90f5631c="" class="cd swiper-slide">
+                            <div data-v-90f5631c="" class="cd-wrapper"><img data-v-90f5631c="" alt=""></div>
+                            <p data-v-90f5631c=""></p></div>
+                        <div data-v-90f5631c="" class="lyric swiper-slide">
+                            <div data-v-52173942="" data-v-90f5631c="" id="wrapper">
+                                <ul data-v-90f5631c="" data-v-52173942=""
+                                    style="transform: translate(0px, 0px) translateZ(0px);"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-v-90f5631c="" class="swiper-pagination swiper-pagination-bullets"></div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                <div data-v-1b8659f2="" data-v-41eb650d="" class="player-bottom">
+                    <div data-v-1b8659f2="" class="bottom-progress"><span data-v-1b8659f2="">00:00</span>
+                        <div data-v-1b8659f2="" class="progress-bar">
+                            <div data-v-1b8659f2="" class="progress-line">
+                                <div data-v-1b8659f2="" class="progress-dot"></div>
+                            </div>
+                        </div>
+                        <span data-v-1b8659f2="">00:00</span></div>
+                    <div data-v-1b8659f2="" class="bottom-control">
+                        <div data-v-1b8659f2="" class="mode loop"></div>
+                        <div data-v-1b8659f2="" class="prev"></div>
+                        <div data-v-1b8659f2="" class="play"></div>
+                        <div data-v-1b8659f2="" class="next"></div>
+                        <div data-v-1b8659f2="" class="favorite"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-v-41eb650d="" class="player-bg"><img data-v-41eb650d="" alt=""></div>
+        </div>
+        <div data-v-c17d776e="" data-v-1fb81bb6="" class="mini-player">
+            <div data-v-c17d776e="" class="player-wrapper">
+                <div data-v-c17d776e="" class="player-left"><img data-v-c17d776e="" alt="">
+                    <div data-v-c17d776e="" class="player-title"><h3 data-v-c17d776e=""></h3>
+                        <p data-v-c17d776e=""></p></div>
+                </div>
+                <div data-v-c17d776e="" class="player-right">
+                    <div data-v-c17d776e="" class="play"></div>
+                    <div data-v-c17d776e="" class="list"></div>
+                </div>
+            </div>
+        </div>
+        <div data-v-c54deb1a="" data-v-1fb81bb6="" class="list-player" style="display: none;">
+            <div data-v-c54deb1a="" class="player-wrapper">
+                <div data-v-c54deb1a="" class="player-top">
+                    <div data-v-c54deb1a="" class="top-left">
+                        <div data-v-c54deb1a="" class="mode loop"></div>
+                        <p data-v-c54deb1a="">顺序播放</p></div>
+                    <div data-v-c54deb1a="" class="top-right">
+                        <div data-v-c54deb1a="" class="del"></div>
+                    </div>
+                </div>
+                <div data-v-c54deb1a="" class="player-middle">
+                    <div data-v-52173942="" data-v-c54deb1a="" id="wrapper">
+                        <ul data-v-c54deb1a="" data-v-52173942=""
+                            style="transform: translate(0px, 0px) translateZ(0px);"></ul>
+                    </div>
+                </div>
+                <div data-v-c54deb1a="" class="player-bottom"><p data-v-c54deb1a="">关闭</p></div>
+            </div>
+        </div>
+        <audio data-v-1fb81bb6=""></audio>
+    </div>
+</div>
+<script src="js/chunk-vendors.722e1bb3.js"></script>
+<script src="js/app.378944eb.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./apple-touch-icon114.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./apple-touch-icon152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon180.png">
+    <link rel="icon" href="./favicon.ico">
+    <script>/*
+        注意点:
+        预渲染的本质就是在打包时就"模拟浏览器"提前访问路由对应的网页, 然后将访问的结果写入到.html文件中
+        但是由于在打包时访问并不是通过"真实的浏览器"来访问, 所以拿不到正是的像素比
+        所以预渲染时写入到.html文件中的meta就是错误的
+        也正是因为预渲染的时候已经写入过meta标签了, 而运行的时候又会执行一次JS代码再写入一次
+        就导致了网页中有两个meta标签
+        * */
+    let scale = 1.0 / window.devicePixelRatio
+    let text = `<meta name="viewport" content="width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no">`
+    document.write(text)
+    document.documentElement.style.fontSize = window.innerWidth / 7.5 + 'px'
+    document.documentElement.setAttribute('data-dpr', window.devicePixelRatio + '')
+    document.documentElement.setAttribute('data-theme', 'theme')</script>
+    <link href="css/chunk-2c53fbde.aafacda3.css" rel="prefetch">
+    <link href="css/chunk-37be0faa.476c8e25.css" rel="prefetch">
+    <link href="css/chunk-3af651ee.41a5ad90.css" rel="prefetch">
+    <link href="css/chunk-52307b74.3e88669f.css" rel="prefetch">
+    <link href="css/chunk-7835ee76.ded57f44.css" rel="prefetch">
+    <link href="css/chunk-7ac05ac6.e74e0a6c.css" rel="prefetch">
+    <link href="js/chunk-2c53fbde.8c3d2060.js" rel="prefetch">
+    <link href="js/chunk-37be0faa.5507675a.js" rel="prefetch">
+    <link href="js/chunk-3af651ee.9608930f.js" rel="prefetch">
+    <link href="js/chunk-52307b74.0e168546.js" rel="prefetch">
+    <link href="js/chunk-7835ee76.c6ecd509.js" rel="prefetch">
+    <link href="js/chunk-7ac05ac6.7f61eed5.js" rel="prefetch">
+    <link href="css/app.a95396a6.css" rel="preload" as="style">
+    <link href="css/chunk-vendors.0e671b37.css" rel="preload" as="style">
+    <link href="js/app.378944eb.js" rel="preload" as="script">
+    <link href="js/chunk-vendors.722e1bb3.js" rel="preload" as="script">
+    <link href="css/chunk-vendors.0e671b37.css" rel="stylesheet">
+    <link href="css/app.a95396a6.css" rel="stylesheet">
+</head>
+<body>
+<div id="app"></div>
+<script src="js/chunk-vendors.722e1bb3.js"></script>
+<script src="js/app.378944eb.js"></script>
+</body>
+</html>
